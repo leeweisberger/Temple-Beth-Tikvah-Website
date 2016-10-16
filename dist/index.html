@@ -1,0 +1,11 @@
+<!--
+  @author ctola
+--><!doctype html><html lang="en"><head><meta charset="UTF-8"><title>angular materializecss</title><!-- Fonts Icon material--><link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Stylesheets --><link rel="stylesheet" href="lib/css/materialize.css"><link rel="stylesheet" href="css/style.css"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body ng-app="app"><nav-bar></nav-bar><main><div ui-view></div></main><footer class="page-footer"><div class="container"><div><p class="grey-text text-lighten-4">Temple Beth Tikvah | 950 Preakness Avenue | Wayne, New Jersey 07470</p><p class="grey-text text-lighten-4">Tel: (973) 595-6565 | Fax: (973) 595-8192 | tbtexec@optonline.net</p></div></div><div class="footer-copyright"><div class="container">© 2016 by Temple Beth Tikvah<div class="right">Website by Lee Weisberger</div></div></div></footer><!-- Javascript --><script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script><script>// Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBpZn-QzXhHB48oOG58cMxi0M2xsc4QFNg",
+        authDomain: "temple-website.firebaseapp.com",
+        databaseURL: "https://temple-website.firebaseio.com",
+        storageBucket: "",
+        messagingSenderId: "497326397533"
+      };
+      firebase.initializeApp(config);</script><script src="js/jquery.js"></script><script src="lib/js/angular.js"></script><script src="lib/js/angular-ui-router.js"></script><script src="lib/js/angular-resource.js"></script><script src="lib/js/materialize.js"></script><script src="lib/js/angular-materialize.js"></script><script src="js/app.module.js"></script><script src="js/config/app.config.js"></script><script src="js/factories/services.factory.js"></script><script src="js/filters/to.filter.js"></script><script src="js/controllers/home.controller.js"></script><script src="js/controllers/clergy.controller.js"></script><script src="js/controllers/staff.controller.js"></script><script src="js/controllers/membership.controller.js"></script><script src="js/controllers/history.controller.js"></script><script src="js/directives/navbar.js"></script><script src="js/directives/templecard.js"></script><!-- Javascript UI--><script>//$(".button-collapse").sideNav();</script></body></html>
