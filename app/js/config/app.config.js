@@ -18,7 +18,7 @@ function appConfig($stateProvider, $urlRouterProvider) {
             resolve: {
                 homePageData:  function($http) {
                     return $http.get('https://temple-website.firebaseio.com/home.json').then(function(response) {
-                        return response.data.home;
+                        return response.data;
                     });
                 }
             }
