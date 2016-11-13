@@ -16,17 +16,16 @@ nav, footer.page-footer {
 nav ul a:hover, .side-nav a:hover  {
   background-color: #ffee58; }
 
-.logo {
-  height: 50px;
-  margin-bottom: 32px;
-  margin-top:32px;
+.full-logo {
+  height: 100%;
+  margin-left: 5%;
 }
 
-.logo a:hover {
-  background-color:white;
+.logo-container {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 80px;
 }
-
-
 .dropdown-content li a {
   color:#4fc3f7;
 }
@@ -53,6 +52,11 @@ nav ul a:hover, .side-nav a:hover  {
 .title {
   font-family: 'Atma', cursive;
   font-size: 5rem;
+}
+
+.image-center {
+  display: block;
+  margin: 0 auto;
 }
 
 .subheader {
@@ -84,7 +88,22 @@ footer.page-footer {
     background-size: cover;
 }
 
+/* Allow slider captions to come up from the bottom */
+.slider .slides li .center-align {
+  color: #fff;
+  position: absolute;
+  top: auto;
+  bottom: 5%;
+  left: 15%;
+  width: 70%;
+  opacity: 0;
+}
 
+.slider .slides li img {
+  background-position-x: center;
+  background-position-y: initial;
+
+}
 
 @media only screen and (max-width : 992px) {
   .side-nav a {
