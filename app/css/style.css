@@ -99,12 +99,6 @@ footer.page-footer {
   opacity: 0;
 }
 
-.slider .slides li img {
-  background-position-x: center;
-  background-position-y: initial;
-
-}
-
 @media only screen and (max-width : 992px) {
   .side-nav a {
     padding: 0 37.5px 0 45px !important;
