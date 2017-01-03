@@ -1,5 +1,5 @@
 /**
- * @author ctola
+ * @author lweisberger
  */
 angular
     .module("app")
@@ -28,11 +28,6 @@ function appConfig($stateProvider, $urlRouterProvider) {
             templateUrl: "views/clergy.html",
             controller: "ClergyController as clergyCtrl"
         })
-        .state('staff', {
-            url: '/staff',
-            templateUrl: "views/staff.html",
-            controller: "StaffController as staffCtrl"
-        })
         .state('events', {
             url: '/events',
             templateUrl: "views/events.html"
@@ -42,9 +37,24 @@ function appConfig($stateProvider, $urlRouterProvider) {
             templateUrl: "views/membership.html",
             controller: "MembershipController as membershipCtrl"
         })
+        .state('contribute', {
+            url: '/contribute',
+            templateUrl: "views/contribute.html",
+            controller: "ContributeController as contributeCtrl"
+        })
         .state('history', {
             url: '/history',
             templateUrl: "views/history.html",
             controller: "HistoryController as historyCtrl"
+        })
+        .state('education', {
+            url: '/education',
+            templateUrl: "views/education.html",
+            controller: "EducationController as educationCtrl",
+        })
+        .state('bulletins', {
+            url: '/bulletins',
+            templateUrl: "views/bulletins.html",
+            controller: "BulletinsController as bulletinsCtrl",
         });
 }

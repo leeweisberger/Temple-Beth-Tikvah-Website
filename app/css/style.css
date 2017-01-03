@@ -1,14 +1,23 @@
-/*//global styles
-header, main, footer {
-  padding-left: 240px;
-}
 
-@media only screen and (max-width : 992px) {
+/*@media only screen and (max-width : 992px) {
   header, main, footer {
     padding-left: 0;
   }
+}*/
+
+
+/*——————————————
+Navigation
+———————————————*/
+footer.page-footer {
+  margin-top:0px;
 }
-*/
+
+@media only screen and (max-width : 992px) {
+  .side-nav a {
+    padding: 0 37.5px 0 45px !important;
+  }
+}
 
 nav, footer.page-footer {
   background: #4fc3f7; }
@@ -33,54 +42,12 @@ nav ul a:hover, .side-nav a:hover  {
   color:white;
 }
 
-.fill-screen-almost {
-  min-height: calc(100vh - 64px); }
-
-.fill-screen {
-  min-height: 100vh; }
-
-.glass {
-  background: rgba(0, 0, 0, 0.35); }
-.glass2 {
-  background: rgba(0, 0, 0, 0.6); }
-
-.header {
-  font-weight: 300;
-  color: #4fc3f7 !important;
-}
-
-.title {
-  font-family: 'Atma', cursive;
-  font-size: 5rem;
-}
-
-.image-center {
-  display: block;
-  margin: 0 auto;
-}
-
-.subheader {
-  color: #ce93d8 !important;
-}
-
-hr {
-  border-color:#ffee58;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width:50%;
-}
-
-footer.page-footer {
-  margin-top:0px;
-}
-
+/*——————————————
+Home
+———————————————*/
 .parallax {
-    /* The image used */
-/*    background-image: url("../img/temple.jpg");
-*/
     /* Set a specific height */
     min-height: 500px;
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -99,10 +66,48 @@ footer.page-footer {
   opacity: 0;
 }
 
-@media only screen and (max-width : 992px) {
-  .side-nav a {
-    padding: 0 37.5px 0 45px !important;
-  }
+.glass {
+  background: rgba(0, 0, 0, 0.35); 
+}
+
+.glass2 {
+  background: rgba(0, 0, 0, 0.6); 
+}
+
+.fill-screen-almost {
+  min-height: calc(100vh - 64px); 
+}
+
+.fill-screen {
+  min-height: 100vh; 
+}
+
+h3.xl {
+  font-size: 6rem;
+}
+/*——————————————
+Education
+———————————————*/
+.education-offering .title {
+  font-size: 16px;
+}
+
+.education-offering p {
+  margin: 0;
+}
+
+.education-promises, .education-promises li {
+  list-style-type: circle;
+}
+
+.education-more-info p {
+  margin: 0;
+}
+
+.facebook-education {
+  border: none;
+  overflow: hidden;
+  margin-top: 12rem;
 }
 
 /*——————————————
@@ -112,6 +117,52 @@ Global
 body {
   font-family: helvetica;
 }
+
+p {
+  color: rgba(0, 0, 0, 0.71);
+  padding: 0;
+}
+
+.header {
+  font-weight: 300;
+  color: #4fc3f7;
+}
+
+.subheader {
+  color: #ce93d8;
+}
+
+.sidebar {
+  position: fixed;
+}
+
+hr {
+  border-color:#ffee58;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width:50%;
+}
+
+hr.subheader {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+@font-face {
+  font-family: "Plaza";
+  src: url("../fonts/Plaza.ttf")
+}
+
+.temple-font {
+  font-family:'Plaza', sans-serif;
+}
+
+.image-center {
+  display: block;
+  margin: 0 auto;
+}
+
 /*——————————————
 TimeLine CSS
 ———————————————*/
