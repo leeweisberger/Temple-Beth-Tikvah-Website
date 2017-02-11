@@ -1,0 +1,8 @@
+<div class="container">
+	<h1 class="header">Bulletins</h1>
+	<p>{{bulletinsCtrl.about}}</p>
+	<div class="collection">
+			<a class="collection-item" ng-repeat="bulletin in bulletinsCtrl.bulletins" ng-href="files/bulletins/{{bulletin.file}}">{{bulletin.text}}</a>
+	</div>
+
+</div>

@@ -1,21 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <title>Temple Beth Tikvah</title>
   <!-- Fonts Icon material-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="lib/css/materialize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/src/lib/css/materialize.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <!-- endinject -->
   <link href="https://fonts.googleapis.com/css?family=Atma:600" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
 
 </head>
 <body ng-app="app">
+  <base id="baseTag" href="/src/">
   <nav-bar></nav-bar>
   <main>
-    <div ui-view></div>
+    <div ui-view=""></div>
   </main>
   <footer class="page-footer">
     <div class="container">
@@ -44,24 +45,28 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="js/jquery.js"></script>
-    <script src="lib/js/angular.js"></script>
-    <script src="lib/js/angular-ui-router.js"></script>
-    <script src="lib/js/angular-resource.js"></script>
-    <script src="lib/js/materialize.js"></script>
-    <script src="lib/js/angular-materialize.js"></script>
-    <script src="js/app.module.js"></script>
-    <script src="js/config/app.config.js"></script>
-    <script src="js/factories/services.factory.js"></script>
-    <script src="js/filters/to.filter.js"></script>
-    <script src="js/controllers/home.controller.js"></script>
-    <script src="js/controllers/clergy.controller.js"></script>
-    <script src="js/controllers/membership.controller.js"></script>
-    <script src="js/controllers/history.controller.js"></script>
-    <script src="js/controllers/contribute.controller.js"></script>
-    <script src="js/controllers/education.controller.js"></script>
-    <script src="js/controllers/bulletins.controller.js"></script> 
-    <script src="js/directives/navbar.js"></script>
-    <script src="js/directives/templecard.js"></script>
-    </body>
-    </html>
+
+    <!-- inject:js -->                
+    <script src="/src/lib/js/jquery.js"></script>                
+    <script src="/src/lib/js/angular.js"></script>                
+    <script src="/src/js/app.module.js"></script>                
+    <script src="/src/js/config/app.config.js"></script>                
+    <script src="/src/js/controllers/bulletins.controller.js"></script>                
+    <script src="/src/js/controllers/clergy.controller.js"></script>                
+    <script src="/src/js/controllers/contribute.controller.js"></script>                
+    <script src="/src/js/controllers/education.controller.js"></script>                
+    <script src="/src/js/controllers/history.controller.js"></script>                
+    <script src="/src/js/controllers/home.controller.js"></script>                
+    <script src="/src/js/controllers/membership.controller.js"></script>                
+    <script src="/src/js/directives/navbar.js"></script>                
+    <script src="/src/js/directives/templecard.js"></script>                
+    <script src="/src/js/filters/to.filter.js"></script>                
+    <script src="/src/js/services/app.service.js"></script>                
+    <script src="/src/js/factories/services.factory.js"></script>                
+    <script src="/src/lib/js/angular-materialize.js"></script>                
+    <script src="/src/lib/js/angular-resource.js"></script>                
+    <script src="/src/lib/js/angular-ui-router.js"></script>                
+    <script src="/src/lib/js/materialize.js"></script>                
+    <!-- endinject -->
+    
+    </body></html>

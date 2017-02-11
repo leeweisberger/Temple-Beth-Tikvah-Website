@@ -1,0 +1,12 @@
+<div class="container">
+	<h1 class="header">Membership</h1>
+	<p><strong>{{membershipCtrl.membershipInfo}}</strong></p>
+	<ul class="collapsible popout" data-collapsible="expandable">
+	    <li ng-repeat="membership in membershipCtrl.memberships">
+	        <div class="collapsible-header" ng-click="membership.open = !membership.open"><i class="material-icons">{{membershipCtrl.getIcon(membership.open)}}</i>{{membership.header}}</div>
+	        <div class="collapsible-body"><p style="padding: 0" ng-bind-html="renderHtml(membership.body)"></p></div>
+	    </li>
+	</ul>
+	<p><strong>{{membershipCtrl.membershipContact}}</strong></p>
+	
+</div>

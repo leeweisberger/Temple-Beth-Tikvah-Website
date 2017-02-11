@@ -1,0 +1,54 @@
+
+<!-- h<div class="parallax-container fill-screen-almost valign-wrapper glass">
+  <div class="container valign">
+    <h3 class="white-text center temple-font xl">Temple Beth Tikvah</h3>
+    <h3 class="white-text center temple-font">Worship, Learn, Grow</h3>
+    <div class="row center">
+      <a ui-sref="membership" class="center btn-large waves-effect waves-yellow light-blue lighten-2 hoverable">Become A Member Today!</a>
+    </div>
+  </div>
+
+  <div parallax><img ng-src='img/{{homeCtrl.coverImage}}' style="display: block"></div>
+</div> -->
+
+
+<div class="grey lighten-4" style="padding:1px;">
+  <div class="container">
+    <h1 class="header">Our House of Hope, Your Spiritual Home</h1>
+    <div class="slider" slider>
+      <ul class="slides">
+        <li ng-repeat="slide in homeCtrl.slides">
+          <img ng-src="img/{{slide.image}}">
+          <div class="caption center-align glass">
+            <h3>{{slide.title}}</h3>
+            <h5 class="light grey-text text-lighten-3">{{slide.subTitle}}</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+<!-- 
+    <h2 class="header">A Message From the Rabbi</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="img/rabbi.png">
+      </div>
+      <div class="card-stacked">
+        <div class="video-container card-content">
+          <iframe width="853" height="480" ng-src="{{homeCtrl.trustSrc(homeCtrl.video)}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div ng-repeat='card in homeCtrl.homeCards'>
+      <div class="row" ng-if="$even">
+        <div class="col l6 s6">
+          <temple-card link-text={{homeCtrl.homeCards[$index].linkText}} card-text={{homeCtrl.homeCards[$index].text}} card-title="{{homeCtrl.homeCards[$index].title}}" link="{{homeCtrl.homeCards[$index].link}}" image='{{homeCtrl.homeCards[$index].image}}'></temple-card>
+          </div>
+          <div class="col l6 s6">
+          <temple-card link-text={{homeCtrl.homeCards[$index+1].linkText}} card-text={{homeCtrl.homeCards[$index+1].text}} card-title="{{homeCtrl.homeCards[$index+1].title}}" link="{{homeCtrl.homeCards[$index+1].link}}" image='{{homeCtrl.homeCards[$index+1].image}}'></temple-card>
+        </div>
+      </div> 
+    </div>   
+  </div>
+</div>
