@@ -19,6 +19,8 @@ var gulp = require("gulp"),
     dom  = require('gulp-dom')
     imagemin = require('gulp-imagemin')
     runSequence = require('run-sequence');
+require('events').EventEmitter.prototype._maxListeners = 100;
+
 
 
 /** FTP Configuration **/
@@ -34,7 +36,7 @@ var deployFilesGlobMinusImages = [
                         './app/dist/**/*', '!./app/dist/img/**',
                         './app/index.html'
                         ];    
-var remoteFolder = '/public_html/testdrive'
+var remoteFolder = '/public_html'
 
 // helper function to build an FTP connection based on our configuration
 function getFtpConnection() {  
@@ -55,7 +57,7 @@ gulp.task('ftp-deploy', function() {
 
     var conn = getFtpConnection();
 
-    return gulp.src(deployFilesGlob, { base: '.', buffer: false })
+    return gulp.src(deployFilesGlob, { base: 'app/', buffer: false })
         .pipe( conn.newer( remoteFolder ) ) // only upload newer files 
         .pipe( conn.dest( remoteFolder ) )
     ;
@@ -68,7 +70,7 @@ gulp.task('ftp-deploy-minus-images', function() {
 
     var conn = getFtpConnection();
 
-    return gulp.src(deployFilesGlobMinusImages, { base: '.', buffer: false })
+    return gulp.src(deployFilesGlobMinusImages, { base: 'app/', buffer: false })
         .pipe( conn.newer( remoteFolder ) ) // only upload newer files 
         .pipe( conn.dest( remoteFolder ) )
     ;

@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="header">Ask The Rabbi</h1> 
+  <p>Fill out this form to send an email to the Rabbi. She will reply directly to the email address you provide.
+  <div class="row">
+    <form class="col s12" novalidate ng-submit="askTheRabbiCtrl.sendEmail(emailInput)">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input ng-model="askTheRabbiCtrl.formData.name" id="icon_prefix" type="text" class="validate" required>
+          <label for="icon_prefix">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input ng-model="askTheRabbiCtrl.formData.email" id="email" type="email" class="validate" required>
+          <label for="email" data-error="Incorrectly formatted email">Your Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea ng-model="askTheRabbiCtrl.formData.body" id="message" class="materialize-textarea" required></textarea>
+          <label for="message">Your Question</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>   
+</div>

@@ -13,11 +13,41 @@
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">{{clergy.name}}<i class="material-icons right">close</i></span>
-						<p>{{clergy.bio}}</p>
+						<p ng-bind-html="renderHtml(clergy.bio)"></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<h1 class="header">Our Staff</h1>
+	<div class="row">
+		<div ng-repeat="staff in clergyCtrl.staffs">
+			<div class="col l6 s12">
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src='img/{{staff.image}}'>
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4">{{staff.name}}<i class="material-icons right">more_vert</i></span>
+						<p class="grey-text text-lighten-1">{{staff.email}}</p>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">{{staff.name}}<i class="material-icons right">close</i></span>
+						<p ng-bind-html="renderHtml(staff.bio)"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul>
+		<li class="center-align" ng-repeat="otherStaff in clergyCtrl.otherStaffs">
+			<p>{{otherStaff.name}} - {{otherStaff.role}}</p>
+		</li>
+	</ul>
+	<img align="middle" materialboxed class="hide-on-med-and-down materialboxed" data-caption="The Temple Staff" width="800" src="img/staff.jpg" style="margin-left: auto; margin-right: auto; margin-bottom: 40px; width: 60vw;">
+	<img class="hide-on-large-only" width="800" src="img/staff.jpg" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 40px; width: 80vw;">
+
+
 </div>
 

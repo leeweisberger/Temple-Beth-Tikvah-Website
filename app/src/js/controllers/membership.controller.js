@@ -10,6 +10,7 @@
                 this.text = response.data.text;
                 this.membershipInfo = response.data.membershipInfo;
                 this.membershipContact = response.data.membershipContact;
+                this.membershipInclusion = response.data.inclusion;
             });
 
             $scope.renderHtml = function(html_code) {

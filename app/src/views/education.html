@@ -7,12 +7,12 @@
 				<h3 class="header">Religious School</h3>
 				<p>{{educationCtrl.about}}</p>
 				<ul class="collection">
-					<li class="collection-item education-offering" ng-repeat="offering in educationCtrl.offerings">
+					<li class="collection-item education-offering" ng-repeat="offering in educationCtrl.religiousSchoolOfferings">
 						<span class="title">{{offering.name}}</span>
 						<p>Ages: {{offering.age}}<br>Time: {{offering.time}}</p>
 					</li>
 				</ul>
-				<a href="http://www.w3schools.com/html/">Class Schedule</a>
+				<!-- <a href="http://www.w3schools.com/html/">Class Schedule</a> -->
 
 				<h5>B'nai Mitzvah</h5>
 				<ul>
@@ -31,18 +31,55 @@
 			</section>
 			<hr class="subheader">
 
-			<section scrollspy id="tots">
-				<h3 class="header">TBT Torah Tots</h3>
+			<section scrollspy id="weekend">
+				<h3 class="header">{{educationCtrl.weekend.title}}</h3>
+				<p><b>Who:</b> {{educationCtrl.weekend.who}}</p>
+				<p><b>When:</b> {{educationCtrl.weekend.when}}</p>
+				<p><b>What:</b></p>
+				<ul>
+					<li ng-repeat="feature in educationCtrl.weekend.what">
+						<p>{{feature}}</p>
+					</li>
+				</ul>
+			</section>
+			<hr class="subheader">
+
+			<section scrollspy id="prek">
+				<h3 class="header">{{educationCtrl.prek.title}}</h3>
+				<p><b>Who:</b> {{educationCtrl.prek.who}}</p>
+				<p><b>When:</b> {{educationCtrl.prek.when}}</p>
+				<p><b>What:</b></p>
+				<ul>
+					<li ng-repeat="feature in educationCtrl.prek.what">
+						<p>{{feature}}</p>
+					</li>
+				</ul>
 			</section>
 			<hr class="subheader">
 
 			<section scrollspy id="adult">
-				<h3 class="header">Adult Education</h3>
+				<h3 class="header">{{educationCtrl.adult.title}}</h3>
+				<p><b>Who:</b> {{educationCtrl.adult.who}}</p>
+				<p><b>When:</b> {{educationCtrl.adult.when}}</p>
+				<p><b>What:</b></p>
+				<ul>
+					<li ng-repeat="feature in educationCtrl.adult.what">
+						<p>{{feature}}</p>
+					</li>
+				</ul>
 			</section>
 			<hr class="subheader">
 
-			<section scrollspy id="family">
-				<h3 class="header">Family Education</h3>
+			<section scrollspy id="other">
+				<h3 class="header">{{educationCtrl.other.title}}</h3>
+				<p><b>Who:</b> {{educationCtrl.other.who}}</p>
+				<p><b>When:</b> {{educationCtrl.other.when}}</p>
+				<p><b>What:</b></p>
+				<ul>
+					<li ng-repeat="feature in educationCtrl.other.what">
+						<p>{{feature}}</p>
+					</li>
+				</ul>
 			</section>
 			<hr class="subheader">
 
@@ -61,7 +98,7 @@
 							</div>
 							<div class="card-reveal">
 								<span class="card-title grey-text text-darken-4">{{educationCtrl.director.name}}<i class="material-icons right">close</i></span>
-								<p>{{educationCtrl.director.bio}}</p>
+								<p ng-bind-html="renderHtml(educationCtrl.director.bio)"></p>
 							</div>
 						</div>
 					</div>
@@ -71,13 +108,14 @@
 		<div class="col l3 hide-on-med-and-down">
 			<ul class="section table-of-contents sidebar">
 		        <li> <a href="#religious-school" ng-click="scrollTo('religious-school')">Religious School</a></li>
-		        <li> <a href="#tots" ng-click="scrollTo('tots')">TBT Tots</a></li>
-		        <li> <a href="#adult" ng-click="scrollTo('adult')">Adult Education</a></li>
-		        <li> <a href="#family" ng-click="scrollTo('family')">Family Education</a></li>
+		        <li> <a href="#weekend" ng-click="scrollTo('weekend')">{{educationCtrl.weekend.title}}</a></li>
+		        <li> <a href="#prek" ng-click="scrollTo('prek')">{{educationCtrl.prek.title}}</a></li>
+		        <li> <a href="#adult" ng-click="scrollTo('adult')">{{educationCtrl.adult.title}}</a></li>
+		        <li> <a href="#other" ng-click="scrollTo('other')">{{educationCtrl.other.title}}</a></li>
 		        <li> <a href="#more" ng-click="scrollTo('more')">More Info</a></li>
 
 	      	</ul>
-			<iframe class="facebook-education sidebar" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTemple-Beth-Tikvah-Wayne-573503462723038%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1879757868936391" width="600px" height="400px" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			<!-- <iframe class="facebook-education sidebar" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTemple-Beth-Tikvah-Wayne-573503462723038%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1879757868936391" width="600px" height="400px" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
       
 		</div>
 	</div>

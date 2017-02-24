@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col l9 s12">
+      <h1 class="header">Worship</h1>
+      <hr class="subheader">
+
+      <section scrollspy id="shabbat">
+        <h3 class="header">Shabbat</h3> 
+        <p>Shabbat services are held weekly every:</p>
+        <ul>
+          <li ng-repeat="worshipTime in worshipCtrl.worshipTimes">
+            <p><b>{{worshipTime}}</b></p>
+          </li>
+        </ul>
+        <p>For an up to date look at our schedule, including the Holiday and Kabbalat Shabbat schedule, see our <a ui-sref="events">Calendar</a></p>
+      </section>
+      <hr class="subheader">
+
+      <section scrollspy id="high-holidays">
+        <h3 class="header">High Holidays</h3> 
+        <p>{{worshipCtrl.highHolidaysIntro}}</p>
+        <p><b>Rosh Hashanah:</b> {{worshipCtrl.roshHashanah}}</p>
+        <p><b>Yom Kippur:</b> {{worshipCtrl.yomKippur}}</p>
+        <p><b>Ten Days of Repentance:</b> {{worshipCtrl.atonement}}</p>
+        <p><b>Tickets:</b> {{worshipCtrl.highHolidaysTicketInfo}}</p>
+      </section>
+      <hr class="subheader">
+
+      <section scrollspy id="tot-shabbat">
+        <h3 class="header">Tot Shabbat</h3>
+        <p>{{worshipCtrl.totShabbatIntro}}</p>
+        <p>{{worshipCtrl.totShabbatAbout}}</p>
+        <p>Tot Shabbat services are held occasionally on:</p>
+        <ul>
+          <li ng-repeat="totShabbatTime in worshipCtrl.totShabbatTimes">
+            <p><b>{{totShabbatTime}}</b></p>
+          </li>
+        </ul>
+        <p>Upcoming dates include:
+          <span class="col-sd-4" ng-repeat="totShabbatDate in worshipCtrl.totShabbatDates">
+            <b>{{totShabbatDate}}{{$last ? '' : ', '}}</b>
+          </span>
+        </p>
+        <p>For other young family events, see our <a ui-sref="events">Calendar</a></p>
+      </section>
+      <hr class="subheader">
+
+      <section scrollspy id="minyon">
+        <h3 class="header">Morning Minyon</h3>
+        <p>{{worshipCtrl.morningMinyonIntro}} Morning Minyons are held weekly every:</p>
+        <ul>
+          <li ng-repeat="minyonTime in worshipCtrl.morningMinyonTimes">
+            <p><b>{{minyonTime}}</b></p>
+          </li>
+        </ul>
+        <p>{{worshipCtrl.morningMinyonAbout}}</p>
+
+      </section>
+    </div>
+
+    <div class="col l3 hide-on-med-and-down">
+      <ul class="section table-of-contents sidebar">
+        <li> <a href="#shabbat" ng-click="scrollTo('shabbat')">Shabbat</a></li>
+        <li> <a href="#high-holidays" ng-click="scrollTo('high-holidays')">High Holidays</a></li>
+        <li> <a href="#tot-shabbat" ng-click="scrollTo('tot-shabbat')">Tot Shabbat</a></li>
+        <li> <a href="#minyon" ng-click="scrollTo('minyon')">Morning Minyon</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

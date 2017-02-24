@@ -40,11 +40,13 @@ nav ul a:hover {
   margin-top: 32px;
   margin-bottom: 80px;
 }
-.dropdown-content li a {
-  color:#4fc3f7;
-}
+
 .dropdown-content li a:hover {
-  color:white;
+  color:#757575;
+}
+
+.dropdown-content li a {
+  color: #4fc3f7;
 }
 
 /*——————————————
@@ -112,7 +114,7 @@ Education
 .facebook-education {
   border: none;
   overflow: hidden;
-  margin-top: 12rem;
+  margin-top: 14rem;
 }
 
 /*——————————————
@@ -167,6 +169,14 @@ hr.subheader {
 .image-center {
   display: block;
   margin: 0 auto;
+}
+
+.redToast {
+  background: red;
+}
+
+.greenToast {
+  background: green;
 }
 
 /*——————————————

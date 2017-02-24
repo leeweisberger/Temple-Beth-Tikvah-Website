@@ -56,5 +56,15 @@ function appConfig($stateProvider, $urlRouterProvider) {
             url: '/bulletins',
             templateUrl: "views/bulletins.html",
             controller: "BulletinsController as bulletinsCtrl",
+        })
+        .state('asktherabbi', {
+            url: '/asktherabbi',
+            templateUrl: "views/asktherabbi.html",
+            controller: "AskTheRabbiController as askTheRabbiCtrl",
+        })
+        .state('worship', {
+            url: '/worship',
+            templateUrl: "views/worship.html",
+            controller: "WorshipController as worshipCtrl",
         });
 }
